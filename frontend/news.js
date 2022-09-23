@@ -1,19 +1,19 @@
-window.onload{
+window.onload(()=>{
 
     $.ajax({
         url: "http://localhost/Backend/news/news.php",
         cache: false,
-        contentType: "application/json; charset=utf-8",
-    dataType: "json",
+    //     contentType: "application/json; charset=utf-8",
+    // dataType: "json",
         success: function(data){
-      console.log(data)        
+      console.log(data[0].text)        
     }
     });
 
 
     title="nothing";
     text="empty";
-    
+
 component=`<div class="card" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
